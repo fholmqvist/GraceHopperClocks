@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <title>Grace Hopper Clocks</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="clockbox">
+            <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+                <g id="face">
+                    <circle class="circle" cx="300" cy="300" r="253.9" />
+                    <path class="hour-marks"
+                        d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" />
+                    <circle class="mid-circle" cx="300" cy="300" r="16.2" />
+                </g>
+                <g id="hour1">
+                    <path class="hour-arm" d="M300.5 298V142" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="minute1">
+                    <path class="minute-arm" d="M300.5 298V67" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="second1">
+                    <path class="second-arm" d="M300.5 350V55" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+            </svg>
+        </div>
+        <div class="clockbox">
+            <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+                <g id="face">
+                    <circle class="circle" cx="300" cy="300" r="253.9" />
+                    <path class="hour-marks"
+                        d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" />
+                    <circle class="mid-circle" cx="300" cy="300" r="16.2" />
+                </g>
+                <g id="hour2">
+                    <path class="hour-arm" d="M300.5 298V142" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="minute2">
+                    <path class="minute-arm" d="M300.5 298V67" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="second2">
+                    <path class="second-arm" d="M300.5 350V55" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+            </svg>
+        </div>
+        <div class="clockbox">
+            <svg id="clock3" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+                <g id="face">
+                    <circle class="circle" cx="300" cy="300" r="253.9" />
+                    <path class="hour-marks"
+                        d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" />
+                    <circle class="mid-circle" cx="300" cy="300" r="16.2" />
+                </g>
+                <g id="hour3">
+                    <path class="hour-arm" d="M300.5 298V142" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="minute3">
+                    <path class="minute-arm" d="M300.5 298V67" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="second3">
+                    <path class="second-arm" d="M300.5 350V55" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+            </svg>
+        </div>
+    </main>
+</body>
+
+<style>
+    .main {
+        display: flex;
+        padding: 2em;
+        height: 50vh;
+        justify-content: center;
+        align-items: middle;
+    }
+
+    .clockbox,
+    #clock,
+    #clock3 {
+        width: 100%;
+    }
+
+    .circle,
+    .hour-marks,
+    .hour-arm,
+    .minute-arm,
+    .second-arm {
+        fill: none;
+        stroke: #000;
+    }
+
+    .circle,
+    .hour-marks,
+    .hour-arm,
+    .minute-arm,
+    .second-arm {
+        stroke-miterlimit: 10;
+    }
+
+    .circle,
+    .hour-marks {
+        stroke-width: 5;
+    }
+
+    .hour-arm {
+        stroke-width: 8;
+    }
+
+    .minute-arm {
+        stroke-width: 6;
+    }
+
+    .second-arm {
+        stroke-width: 4;
+    }
+
+    .mid-circle {
+        fill: #000;
+    }
+
+    .sizing-box {
+        fill: none;
+    }
+
+    #hour1,
+    #minute1,
+    #second1,
+    #hour2,
+    #minute2,
+    #second2,
+    #hour3,
+    #minute3,
+    #second3 {
+        transform-origin: 300px 300px;
+    }
+</style>
+
+<script>
+    const hour1 = document.getElementById("hour1")
+    const minute1 = document.getElementById("minute1")
+    const second1 = document.getElementById("second1")
+    const hour2 = document.getElementById("hour2")
+    const minute2 = document.getElementById("minute2")
+    const second2 = document.getElementById("second2")
+    const hour3 = document.getElementById("hour3")
+    const minute3 = document.getElementById("minute3")
+    const second3 = document.getElementById("clock3")
+
+    const regularClock = () => {
+        var [hrPos, minPos, secPos] = getArmRegularPositions()
+
+        hour1.style.transform = "rotate(" + hrPos + "deg)"
+        minute1.style.transform = "rotate(" + minPos + "deg)"
+        second1.style.transform = "rotate(" + secPos + "deg)"
+
+        setTimeout(() => regularClock(), 1000)
+    }
+
+    const reverseClock = () => {
+        var [hrPos, minPos, secPos] = getArmReversePositions()
+
+        hour2.style.transform = "rotate(" + hrPos + "deg)"
+        minute2.style.transform = "rotate(" + minPos + "deg)"
+        second2.style.transform = "rotate(" + secPos + "deg)"
+
+        setTimeout(() => reverseClock(), 1000)
+    }
+
+    const spinningClock = () => {
+        var [hrPos, minPos, secPos] = getArmRegularPositions()
+
+        hour3.style.transform = "rotate(" + hrPos + "deg)"
+        minute3.style.transform = "rotate(" + minPos + "deg)"
+        second3.style.transform = "rotate(" + secPos + "deg)"
+
+        setTimeout(() => spinningClock(), 1000)
+    }
+
+    const getArmRegularPositions = () => {
+        var [hr, min, sec] = getTime()
+
+        let hrPos = hr * 360 / 12 + ((min * 360 / 60) / 12)
+        let minPos = (min * 360 / 60) + (sec * 360 / 60) / 60
+        let secPos = sec * 360 / 60
+
+        return [hrPos, minPos, secPos]
+    }
+
+    const getArmReversePositions = () => {
+        var [hr, min, sec] = getTime()
+
+        let hrPos = hr * 360 / 12 + ((min * 360 / 60) / 12)
+        let minPos = (min * 360 / 60) + (sec * 360 / 60) / 60
+        let secPos = sec * 360 / 60
+
+        return [-hrPos, -minPos, -secPos]
+    }
+
+    const getTime = () => {
+        var date = new Date()
+        return [date.getHours(), date.getMinutes(), date.getSeconds()]
+    }
+
+    regularClock()
+    reverseClock()
+    spinningClock()
+
+</script>
+
+</html>
