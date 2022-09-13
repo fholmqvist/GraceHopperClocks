@@ -1,7 +1,7 @@
 const getHandElements = n => [
-    document.getElementById("hour" + n),
-    document.getElementById("minute" + n),
-    document.getElementById("second" + n)
+    document.getElementById('hour' + n),
+    document.getElementById('minute' + n),
+    document.getElementById('second' + n)
 ]
 
 const [hour1, minute1, second1] = getHandElements(1)
@@ -10,12 +10,14 @@ const [hour3, minute3, second3] = getHandElements(3)
 
 const time = 1000
 
+const rotate = pos => `rotate(${pos}deg)`
+
 const regularClock = () => {
     var [hrPos, minPos, secPos] = getArmRegularPositions()
 
-    hour1.style.transform = "rotate(" + hrPos + "deg)"
-    minute1.style.transform = "rotate(" + minPos + "deg)"
-    second1.style.transform = "rotate(" + secPos + "deg)"
+    hour1.style.transform = rotate(hrPos)
+    minute1.style.transform = rotate(minPos)
+    second1.style.transform = rotate(secPos)
 
     setTimeout(() => regularClock(), time)
 }
@@ -23,9 +25,9 @@ const regularClock = () => {
 const reverseClock = () => {
     var [hrPos, minPos, secPos] = getArmReversePositions()
 
-    hour2.style.transform = "rotate(" + hrPos + "deg)"
-    minute2.style.transform = "rotate(" + minPos + "deg)"
-    second2.style.transform = "rotate(" + secPos + "deg)"
+    hour2.style.transform = rotate(hrPos)
+    minute2.style.transform = rotate(minPos)
+    second2.style.transform = rotate(secPos)
 
     setTimeout(() => reverseClock(), time)
 }
@@ -33,9 +35,9 @@ const reverseClock = () => {
 const spinningClock = () => {
     var [hrPos, minPos, secPos] = getArmRegularPositions()
 
-    hour3.style.transform = "rotate(" + hrPos + "deg)"
-    minute3.style.transform = "rotate(" + minPos + "deg)"
-    second3.style.transform = "rotate(" + secPos + "deg)"
+    hour3.style.transform = rotate(hrPos)
+    minute3.style.transform = rotate(minPos)
+    second3.style.transform = rotate(secPos)
 
     setTimeout(() => spinningClock(), time)
 }
@@ -62,6 +64,8 @@ const getTime = () => {
     return [date.getHours(), date.getMinutes(), date.getSeconds()]
 }
 
-regularClock()
-reverseClock()
-spinningClock()
+document.addEventListener('DOMContentLoaded', () => {
+    regularClock()
+    reverseClock()
+    spinningClock()
+})
